@@ -24,11 +24,9 @@ public class ProductRepository {
     }
 
     public Product edit(Product product) {
-        for (int i = 0; i < productData.size(); i++){
-            Product productInList = productData.get(i);
-            if (productInList.getProductId().equals(product.getProductId())){
-                productInList.setProductName(product.getProductName());
-                productInList.setProductQuantity(product.getProductQuantity());
+        for (Product currentProduct : productData) {
+            if (currentProduct.getProductId().equals(product.getProductId())) {
+                productData.set(productData.indexOf(currentProduct), product);
                 return product;
             }
         }
