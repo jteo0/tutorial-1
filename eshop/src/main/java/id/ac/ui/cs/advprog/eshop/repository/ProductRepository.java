@@ -23,14 +23,14 @@ public class ProductRepository {
         return productData.iterator();
     }
 
-    public Product edit(Product product) {
-        for (Product currentProduct : productData) {
-            if (currentProduct.getProductId().equals(product.getProductId())) {
-                productData.set(productData.indexOf(currentProduct), product);
-                return product;
+    public void edit(String productId, Product updatedProduct) {
+        for (int i = 0; i < productData.size(); i++) {
+            if (productData.get(i).getProductId().equals(productId)) {
+                Product product = productData.get(i);
+                product.setProductName(updatedProduct.getProductName());
+                product.setProductQuantity(updatedProduct.getProductQuantity());
             }
         }
-        return null;
     }
 
     public Product findProductById(String productId){

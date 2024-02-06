@@ -31,14 +31,15 @@ public class ProductController {
 
     @GetMapping("/edit/{productId}")
     public String editProductPage(@PathVariable String productId, Model model) {
-        Product product = service.findProductById(productId);
+        service.setId(productId);
+        Product product = new Product();
         model.addAttribute("product", product);
         return "editProduct";
     }
 
     @PostMapping("/edit/{productId}")
-    public String editProductPost(@ModelAttribute Product editedProduct, Model model) {
-        service.edit(editedProduct);
+    public String editProductPost(@ModelAttribute Product edited, Model model) {
+        service.edit(edited);
         return "redirect:/product/list";
     }
 
