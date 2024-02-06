@@ -14,6 +14,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductRepository productRepository;
+    private String tempId = "";
 
     @Override
     public Product create(Product product) {
@@ -30,8 +31,13 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product edit(Product edited) {
-        return (productRepository.edit(edited));
+    public void setId(String productId) {
+        tempId = productId;
+    }
+
+    @Override
+    public void edit(Product updatedProduct) {
+        productRepository.edit(tempId, updatedProduct);
     }
 
     @Override
