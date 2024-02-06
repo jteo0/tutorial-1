@@ -19,8 +19,6 @@ public class ProductRepository {
     public Iterator<Product> findAll() {
         return productData.iterator();
     }
-<<<<<<< HEAD
-=======
 
     public void edit(String productId, Product updatedProduct) {
         for (int i = 0; i < productData.size(); i++) {
@@ -45,5 +43,4 @@ public class ProductRepository {
         Product product = findProductById(productId);
         productData.remove(product);
     }
->>>>>>> 03f26d1d8e91b6180591855bdd6299ed0753aff0
 }

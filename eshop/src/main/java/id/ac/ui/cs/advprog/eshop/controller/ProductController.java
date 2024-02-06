@@ -29,8 +29,6 @@ public class ProductController {
         return "redirect:list";
     }
 
-<<<<<<< HEAD
-=======
     @GetMapping("/edit/{productId}")
     public String editProductPage(@PathVariable String productId, Model model) {
         service.setId(productId);
@@ -51,7 +49,6 @@ public class ProductController {
         return "redirect:/product/list";
     }
 
->>>>>>> 03f26d1d8e91b6180591855bdd6299ed0753aff0
     @GetMapping("/list")
     public String productListPage(Model model) {
         List<Product> allProducts = service.findAll();

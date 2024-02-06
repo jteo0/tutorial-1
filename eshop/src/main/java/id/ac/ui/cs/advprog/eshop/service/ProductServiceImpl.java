@@ -29,8 +29,6 @@ public class ProductServiceImpl implements ProductService {
         productIterator.forEachRemaining(allProduct::add);
         return allProduct;
     }
-<<<<<<< HEAD
-=======
 
     @Override
     public void setId(String productId) {
@@ -51,5 +49,4 @@ public class ProductServiceImpl implements ProductService {
     public void delete(String productId) {
         productRepository.delete(productId);
     }
->>>>>>> 03f26d1d8e91b6180591855bdd6299ed0753aff0
 }
