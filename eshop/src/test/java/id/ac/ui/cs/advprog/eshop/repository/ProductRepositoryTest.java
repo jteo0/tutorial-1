@@ -67,5 +67,13 @@ public final class ProductRepositoryTest {
     }
 
     @Test
-    void
+    void testDelete(){
+        Product product = new Product();
+        product.setProductName("Sampo Cap Bambang");
+        product.setProductQuantity(100);
+        productRepository.create(product);
+        productRepository.delete(product.getProductId());
+        Product foundProduct = productRepository.findProductById(product.getProductId());
+        assertNull(foundProduct);
+    }
 }
