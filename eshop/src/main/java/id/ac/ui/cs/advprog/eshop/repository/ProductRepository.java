@@ -19,4 +19,28 @@ public class ProductRepository {
     public Iterator<Product> findAll() {
         return productData.iterator();
     }
+
+    public void edit(String productId, Product updatedProduct) {
+        for (int i = 0; i < productData.size(); i++) {
+            if (productData.get(i).getProductId().equals(productId)) {
+                Product product = productData.get(i);
+                product.setProductName(updatedProduct.getProductName());
+                product.setProductQuantity(updatedProduct.getProductQuantity());
+            }
+        }
+    }
+
+    public Product findProductById(String productId){
+        for (Product product : productData){
+            if (product.getProductId().equals(productId)){
+                return product;
+            }
+        }
+        return null;
+    }
+
+    public void delete(String productId) {
+        Product product = findProductById(productId);
+        productData.remove(product);
+    }
 }

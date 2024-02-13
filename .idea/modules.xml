@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/eshop.iml" filepath="$PROJECT_DIR$/.idea/eshop.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eshop.eshop.main.iml" filepath="$PROJECT_DIR$/.idea/modules/eshop.eshop.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/id.ac.ui.cs.advprog.eshop.main.iml" filepath="$PROJECT_DIR$/.idea/modules/id.ac.ui.cs.advprog.eshop.main.iml" />
     </modules>
   </component>
 </project>
