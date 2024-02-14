@@ -4,6 +4,14 @@ plugins {
 	id("org.springframework.boot") version "3.2.2"
 	id("io.spring.dependency-management") version "1.1.4"
 }
+/*
+sonar {
+	properties {
+		property("sonar.projectKey", "jteo0_tutorial-1")
+		property("sonar.organization", "jteo0sonar")
+		property("sonar.host.url", "https://sonarcloud.io")
+	}
+}*/
 
 sonar {
 	properties {
