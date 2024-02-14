@@ -11,8 +11,8 @@ sonar {
 		property("sonar.organization", "jteo0sonar")
 		property("sonar.host.url", "https://sonarcloud.io")
 	}
-}
-*/
+}*/
+
 group = "id.ac.ui.cs.advprog"
 version = "0.0.1-SNAPSHOT"
 
