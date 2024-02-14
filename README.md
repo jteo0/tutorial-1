@@ -1,6 +1,6 @@
 # Tutorial 2
-<i>Code quality issues:</i></br>
 1.</br>
+Code quality issues:</br>
  - Unused imports: Saya hapus import yang tidak digunakan dalam file.</br>
  - JUnit test classes and methods should have default class visibility: Menghapus 'public' didepan class test JUnit.
 <p>2.</br>
