@@ -1,5 +1,7 @@
 # Tutorial 2
-
+<i>Code quality issues:</i></br>
+ -Unused imports: Saya hapus import yang tidak digunakan dalam file.
+ - 
 URL aplikasi: https://eshop-tutorial-jteo0.koyeb.app/
 # Tutorial 1
 <b>Reflection 1</b></br>
