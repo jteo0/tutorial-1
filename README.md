@@ -1,7 +1,13 @@
 # Tutorial 2
 <i>Code quality issues:</i></br>
- -Unused imports: Saya hapus import yang tidak digunakan dalam file.
- - 
+1.</br>
+ - Unused imports: Saya hapus import yang tidak digunakan dalam file.</br>
+ - JUnit test classes and methods should have default class visibility: Menghapus 'public' didepan class test JUnit.
+<p>2.</br>
+Menurut saya, workflow CI/CD yang saya implementasi sudah memenuhi definisi CI/CD. Bagian CI atau <i>Continuous Integration</i> adalah practice dimana proses testing dilakukan secara otomatis. Pada aplikasi ini, testing akan otomatis berjalan setelah setiap push. Bagian CD atau <i>Continuous Deployment</i> adalah practice dimana proses deployment aplikasi dilakukan secara otomatis. Untuk aplikasi ini, deployment di automasi sehingga setiap kali push, aplikasi akan redeploy menggunakan Koyeb.
+</p>
+
+
 URL aplikasi: https://eshop-tutorial-jteo0.koyeb.app/
 # Tutorial 1
 <b>Reflection 1</b></br>
