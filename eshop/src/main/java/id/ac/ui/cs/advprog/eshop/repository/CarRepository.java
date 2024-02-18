@@ -26,15 +26,15 @@ public class CarRepository {
             if (car.getCarId().equals(id)) {
                 return car;
             }
-            return null;
         }
+        return null;
     }
     public Car update(String id, Car updatedCar) {
         for (int i = 0; i < carData.size(); i++) {
             Car car = carData.get(i);
             if (car.getCarId().equals(id)) {
                 car.setCarName(updatedCar.getCarName());
-                car.setCarColor(updatedCar.geCarColor());
+                car.setCarColor(updatedCar.getCarColor());
                 car.setCarQuantity(updatedCar.getCarQuantity());
                 return car;
             }
