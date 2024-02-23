@@ -1,3 +1,25 @@
+# Tutorial 3
+1.</br>
+Principle SOLID yang berlaku:</br>
+ - Single Responsibility Principle (SRP): SRP adalah prinsip dimana setiap class hanya memiliki satu tugas/<i>responsibility</i>. Ini berarti bahwa di satu class, sebaiknya  memiliki satu tanggung jawab dan berisi hanya dengan satu hal/beberapa hal yang memiliki fungsi yang berdekatan. Pada kode saya, ini diterapkan dengan memisahkan file CarController menjadi filenya sendiri.</br>
+ - Open-Closed Principle (OCP): OCP adalah prinsip dimana tertulis bahwa kode harus bersifat '<i>open for extension but closed for modification</i>'. Ini berarti bahwa suatu kode harus terbuka untuk di extend/dipakai kode lain, tetapi tidak secara langsung dengan dimodifikasi. Pada kode saya, ini diterapkan pada folder controller. Sebagai contoh, CarController mengextend ProductController. CarController menambahkan mapping untuk aplikasi tanpa mengubah ProductController.</br>
+ - Liskov Substitute Principle (LSP): LSP adalah prinsip dimana suatu class dan superclassnya harus memiliki behavior yang serupa (<i>as to be interchangable</i>). Pada kode saya, ini diterapkan pada CarController dan ProductController. Keduanya memiliki fungsi yang berdekatan (create, edit, delete, dll) dan secara keseluruhan memiliki behavior yang sama.</br>
+ - Interface Segregation Principle (ISP): ISP adalah prinsip dimana interface dipisah (segregate) menjadi bagian seperlunya yang spesifik. Pada kode saya, ini bisa dilihat pada ProductServiceImpl dan CarServiceImpl. Kedua interface tersebut dipisah karena walaupun memiliki method yang berdekatan dalam fungsi, secara praktek, methodnya hanya berlaku untuk product dan car masing-masing.</br>
+ - Dependency Inversion Principle (DIP): DIP adalah prinsip dimana suatu class sebaiknya memiliki dependency terhadap interface atau abstract class daripada concrete class. Pada kode saya, ini bisa dilihat dari ProductController dan CarController, dimana keduanya mereference interface ProductService dan CarService.</br>
+
+<p>2.</br>
+Keunggulan penerapan prinsip SOLID (contoh pada kode saya ada di soal pertama):</br>
+ - Kode menjadi lebih mudah untuk dipahami orang lain (semua bagian kode memiliki fungsi yang jelas, dan juga lebih mudah untuk dibaca).</br>
+ - Memudahkan proses testing dan debugging.</br>
+ - Kode menjadi lebih mudah untuk discale dan lebih fleksibel.</p>
+
+<p>3. </br>
+Kekurangan dari tidak menerapkan prinsip SOLID:</br>
+ - Ada risiko lebih tinggi munculnya bug akibat dari perubahan ke kode yang sudah benar.</br>
+ - Bug yang muncul lebih susah untuk dicari, karena yang dimodifikasi bisa dibagian mana saja dari kode.</br>
+ - Kodenya kurang intuitif. Diperlukan waktu yang lebih lama untuk mengertinya (belum tentu masuk akal bagi orang lain juga).
+</p>
+
 # Tutorial 2
 1.</br>
 Code quality issues:</br>
