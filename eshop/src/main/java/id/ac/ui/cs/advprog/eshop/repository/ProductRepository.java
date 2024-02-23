@@ -10,9 +10,12 @@ import java.util.List;
 @Repository
 public class ProductRepository {
     private List<Product> productData = new ArrayList<>();
+    private long currentId = 0;
 
     public Product create(Product product) {
         productData.add(product);
+        product.setProductId(Long.toString(currentId));
+        currentId++;
         return product;
     }
 
