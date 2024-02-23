@@ -9,7 +9,10 @@ import java.util.UUID;
 @Repository
 public class CarRepository {
     static int id = 0;
-    private List<Car> carData = new ArrayList<>();
+    List<Car> carData = new ArrayList<>();
+    public Iterator<Car> findAll() {
+        return carData.iterator();
+    }
     public Car create(Car car) {
         if (car.getCarId() == null) {
             UUID uuid = UUID.randomUUID();
@@ -17,9 +20,6 @@ public class CarRepository {
         }
         carData.add(car);
         return car;
-    }
-    public Iterator<Car> findAll() {
-        return carData.iterator();
     }
     public Car findById(String id) {
         for (Car car : carData) {
