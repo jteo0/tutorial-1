@@ -10,7 +10,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/car")
-class CarController extends ProductController {
+class CarController {
     @Autowired
     private CarServiceImpl carservice;
     private static final String redirectListCar = "redirect:listCar";
