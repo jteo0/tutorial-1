@@ -109,7 +109,7 @@ class OrderServiceTest {
     @Test
     void testFindByIdIfIdNotFound() {
         doReturn(null).when(orderRepository).findById("zczc");
-        assertNull(orderService.findById("zczc");
+        assertNull(orderService.findById("zczc"));
     }
 
     @Test
@@ -127,10 +127,10 @@ class OrderServiceTest {
     @Test
     void testFindAllByAuthorIfAllLowercase() {
         Order order = orders.get(1);
-        doReturn(new ArrayList<Order>().when(orderRepository)).findAllByAuthor(
+        doReturn(new ArrayList<Order>()).when(orderRepository).findAllByAuthor(
                 order.getAuthor().toLowerCase());
 
-        List<Order> results = orderServie.findAllByAuthor(
+        List<Order> results = orderService.findAllByAuthor(
                 order.getAuthor().toLowerCase());
         assertTrue(results.isEmpty());
     }
