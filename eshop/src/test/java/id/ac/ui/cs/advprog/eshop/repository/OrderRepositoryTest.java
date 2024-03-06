@@ -42,7 +42,7 @@ class OrderRepositoryTest {
         assertEquals(order.getId(), result.getId());
         assertEquals(order.getId(), findResult.getId());
         assertEquals(order.getOrderTime(), findResult.getOrderTime());
-        assertEquals(order.getAuthor(), findResult.getOrderTime());
+        assertEquals(order.getAuthor(), findResult.getAuthor());
         assertEquals(order.getStatus(), findResult.getStatus());
     }
 
@@ -58,7 +58,7 @@ class OrderRepositoryTest {
         assertEquals(order.getId(), result.getId());
         assertEquals(order.getId(), findResult.getId());
         assertEquals(order.getOrderTime(), findResult.getOrderTime());
-        assertEquals(order.getAuthor(), findResult.getOrderTime());
+        assertEquals(order.getAuthor(), findResult.getAuthor());
         assertEquals(OrderStatus.SUCCESS.getValue(), findResult.getStatus());
     }
 
