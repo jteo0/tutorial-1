@@ -49,7 +49,7 @@ class OrderRepositoryTest {
     @Test
     void testSaveUpdate() {
         Order order = orders.get(1);
-        orderRspository.save(order);
+        orderRepository.save(order);
         Order newOrder = new Order(order.getId(), order.getProducts(), order.getOrderTime(),
                 order.getAuthor(), OrderStatus.SUCCESS.getValue());
         Order result = orderRepository.save(newOrder);
@@ -63,7 +63,7 @@ class OrderRepositoryTest {
     }
 
     @Test
-    testFindByIdIfIdFound() {
+    void testFindByIdIfIdFound() {
         for (Order order : orders) {
             orderRepository.save(order);
         }
@@ -71,8 +71,8 @@ class OrderRepositoryTest {
         Order findResult = orderRepository.findById(orders.get(1).getId());
         assertEquals(orders.get(1).getId(), findResult.getId());
         assertEquals(orders.get(1).getOrderTime(), findResult.getOrderTime());
-        assertEquals(orders.get(1).getAuthor, findResult.getAuthor());
-        assertEquals(orders.get(1).getStatus, findResult.getStatus());
+        assertEquals(orders.get(1).getAuthor(), findResult.getAuthor());
+        assertEquals(orders.get(1).getStatus(), findResult.getStatus());
     }
 
     @Test
